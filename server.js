@@ -13,8 +13,12 @@ app.get('/', function (req, res) {
     res.send('Hello world!');
 });
 
-app.get('/store', function (req, res) {
-    res.send('To jest sklep');
+app.get('/login', function(req, res){
+    res.render('login');
+});
+
+app.get('/auth/google', function(req, res){
+	res.send('You are logged:)')
 });
 
 app.listen(3000);
